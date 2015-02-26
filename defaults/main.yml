@@ -1,0 +1,12 @@
+---
+# defaults file for mapr_accounts
+
+mapr_user: mapr
+mapr_group: mapr
+mapr_home: /home/mapr
+
+# Password generated with openssl passwd -1
+mapr_user_pw: '$1$yoPLWBQ6$6fvQchDTBu3Ccs3PVURpA.'
+
+mapr_uid: 2147483632
+mapr_gid: 2147483632
