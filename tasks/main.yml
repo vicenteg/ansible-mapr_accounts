@@ -2,11 +2,11 @@
 # tasks file for mapr_accounts
 
 - name: create a mapr group
-  sudo: yes
-  sudo_user: root
+  become: yes
+  become_user: root
   group: name={{mapr_group}} gid="{{mapr_gid}}"
 
 - name: set a password for the mapr user and ensure ssh keys exist
-  sudo: yes
-  sudo_user: root
+  become: yes
+  become_user: root
   user: name={{mapr_user}} uid="{{mapr_uid}}" group="{{mapr_group}}" password="{{mapr_user_pw}}" home="{{mapr_home}}" generate_ssh_key=yes state=present createhome=yes
